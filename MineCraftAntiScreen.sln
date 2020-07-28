@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MineCraftAntiScreen", "MineCraftAntiScreen\MineCraftAntiScreen.vcxproj", "{C63D00C1-4F8A-405F-A03C-C69EC3F11C84}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{7B240448-9B52-4289-82FC-6F2768366C96}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EnterScreen", "EnterScreen\EnterScreen.vcxproj", "{A06CDFD6-7CBB-4555-9838-7866025839AD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Convertor", "Convertor\Convertor.vcxproj", "{7118E792-496E-4B94-A214-ED8962FF9EDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C63D00C1-4F8A-405F-A03C-C69EC3F11C84}.Debug|x64.ActiveCfg = Debug|x64
+		{C63D00C1-4F8A-405F-A03C-C69EC3F11C84}.Debug|x64.Build.0 = Debug|x64
+		{7B240448-9B52-4289-82FC-6F2768366C96}.Debug|x64.ActiveCfg = Debug|x64
+		{7B240448-9B52-4289-82FC-6F2768366C96}.Debug|x64.Build.0 = Debug|x64
+		{A06CDFD6-7CBB-4555-9838-7866025839AD}.Debug|x64.ActiveCfg = Debug|x64
+		{A06CDFD6-7CBB-4555-9838-7866025839AD}.Debug|x64.Build.0 = Debug|x64
+		{7118E792-496E-4B94-A214-ED8962FF9EDA}.Debug|x64.ActiveCfg = Debug|x64
+		{7118E792-496E-4B94-A214-ED8962FF9EDA}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A13625AD-D460-4966-A8E3-F8E7215CC662}
+	EndGlobalSection
+EndGlobal
