@@ -31,7 +31,7 @@ void SaveToFile(DWORD dwSize, DWORD* buf, int width, int height)
 {
 	std::ofstream fout;
 
-	fout.open("output");
+	fout.open("c:\\all\\work\\CheatMaking\\MineCraftAntiScreen\\OUT\\output");
 
 	if (fout.is_open())
 	{
@@ -98,7 +98,7 @@ int InitialThread()
 {
 	
 
-	hbit = (HBITMAP)::LoadImage(NULL, L"input.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	hbit = (HBITMAP)::LoadImage(NULL, L"c:\\all\\work\\CheatMaking\\MineCraftAntiScreen\\OUT\\input.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 
 	GetObject(hbit, sizeof(bmp), &bmp);
 

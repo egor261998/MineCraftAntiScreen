@@ -31,36 +31,7 @@ void reshape(int w, int h)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }
-void SaveToFile(DWORD dwSize, DWORD* buf, int width, int height)
-{
-	char szPath[128];
-	char szBufint[128];
-	std::ofstream fout;
 
-	static int inext = 0;
-	inext++;
-	strcpy_s(szPath, "c:\\all\\img");
-	_itoa_s(inext, szBufint, 10);
-	strcat_s(szPath, szBufint);
-	fout.open(szPath);
-
-	if (fout.is_open())
-	{
-		fout << width << "\n";
-		fout << height << "\n";
-
-		
-		for (DWORD i = 0; i < dwSize; i++)
-			fout << buf[i] << "\n";
-	}
-	else
-	{
-		printf("\nError");
-	}
-
-
-	fout.close();
-}
 
 void display()
 {
@@ -87,10 +58,10 @@ void display()
 			
 			glBegin(GL_POLYGON);
 			glColor4f(r, g, b, a);
-			glVertex2d((double)(x * iX), (double)(y * iY));
-			glVertex2d((double)(x * iX + iXshift), (double)(y * iY));
-			glVertex2d((double)(x * iX + iXshift), (double)(y * iY + iYshift));
-			glVertex2d((double)(x * iX), (double)(y * iY + iYshift));
+			glVertex2d((x * iX), y * iY);
+			glVertex2d(x * iX + iXshift, y * iY);
+			glVertex2d(x * iX + iXshift, y * iY + iYshift);
+			glVertex2d(x * iX, y * iY + iYshift);
 			glEnd();
 			//printf("\nx=%d y=%d r=%d g=%d b=%d %X", x, y, dwd & 0xff, dwd >> 8 & 0xff, dwd >> 16 & 0xff, dwd);
 			
@@ -103,7 +74,7 @@ int InitialThread()
 {
 	std::ifstream fin;
 
-	fin.open("TestScreen");
+	fin.open("c:\\all\\work\\CheatMaking\\MineCraftAntiScreen\\OUT\\TestScreen");
 
 	int i = 0;
 	if (fin.is_open())
@@ -120,7 +91,7 @@ int InitialThread()
 		{
 			fin >> str;
 
-			g_Buffer[i] = atol(str.c_str());
+			g_Buffer[i] = _atoi64(str.c_str());
 			i++;			
 		}
 	}
